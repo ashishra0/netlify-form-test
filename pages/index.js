@@ -20,6 +20,26 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
+          <div className={styles.card}>
+            <input type="hidden" name="form-name" value="contact" />
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" />
+              </p>
+              <p>
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" name="email" />
+              </p>
+              <p>
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+          </div>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
